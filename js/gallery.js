@@ -93,9 +93,11 @@ function GalleryImage() {
 }
 
 function fetchJSON() {
-	mRequest.onreadystatechange() = function(){
+	mRequest.onreadystatechange = () => {
 		if (mRequest.readyState == 4 && mRequest.status == 200){
 			let mJson = JSON.parse(mRequest.responseText)
+			console.log("work :)")
+
 		} else {
 			console.log("no work :(")
 		}
