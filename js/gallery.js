@@ -38,6 +38,16 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
+	document.getElementById("photo").src = mImages
+	let location = document.getElementsByClassName("location")
+	let description = document.getElementsByClassName("description")
+	let data = document.getElementsByClassName("data")
+	description = "description" + mImages[mCurrentIndex].description
+	location = "location" + mImages[mCurrentIndex].location
+	data = "data" + mImages[mCurrentIndex].data
+}
+function iterateJSON(){
+	for x in Range()
 }
 
 // Counter for the mImages array
