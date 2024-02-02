@@ -38,7 +38,8 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
-	document.getElementById("photo").src = mImages
+	document.getElementById("photo").src = mImages[mCurrentIndex]
+	
 	let location = document.getElementsByClassName("location")
 	let description = document.getElementsByClassName("description")
 	let data = document.getElementsByClassName("data")
@@ -46,8 +47,16 @@ function swapPhoto() {
 	location = "location" + mImages[mCurrentIndex].location
 	data = "data" + mImages[mCurrentIndex].data
 }
+
 function iterateJSON(){
-	for x in Range()
+	for (i = 0; i <= mJson.mImages.length; i++ ){
+		if(mCurrentIndex>=mImages.length){
+			mCurrentIndex = 0;
+		}
+		if(mCurrentIndex < 0) {
+			mCurrentIndex = mImages.length - 1;
+		}
+	}
 }
 
 // Counter for the mImages array
@@ -57,7 +66,7 @@ var mCurrentIndex = 0;
 var mRequest = new XMLHttpRequest();
 
 // Array holding GalleryImage objects (see below).
-var mImages = [];
+var mImages = [,];
 
 // Holds the retrived JSON information
 var mJson;
