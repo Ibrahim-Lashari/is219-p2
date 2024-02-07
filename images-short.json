@@ -18,11 +18,11 @@
             "description": "This is the 3rd image in the set",
             "date": "03/01/2016"
         },
-    {
-      "imgPath": "http://placehold.it/518x389?text=index+3",
-      "imgLocation": "Fourth image (index 3)",
-      "description": "This is the 4th image in the set",
-      "date": "04/01/2016"
-    }
+        {
+            "imgPath": "http://placehold.it/518x389?text=index+3",
+            "imgLocation": "Fourth image (index 3)",
+            "description": "This is the 4th image in the set",
+            "date": "04/01/2016"
+        }
   ]
 }
