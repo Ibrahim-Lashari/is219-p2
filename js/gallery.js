@@ -132,3 +132,14 @@ function fetchJSON() {
   mRequest.open("GET", mUrl);
   mRequest.send();
 }
+
+
+$(".moreIndicator").on("click", function () {
+  if ($(".moreIndicator").hasClass("rot90")){
+    $(".moreIndicator").removeClass('rot90').addClass("rot270")
+  } else{
+    $(".moreIndicator").removeClass("rot270").addClass("rot90")
+  }
+
+  $('.details').slideToggle();
+});
