@@ -96,6 +96,46 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 $(document).ready(function () {
   // This initially hides the photos' metadata information
   //$(".details").eq(0).hide();
+
+$(".moreIndicator").on("click", function () {
+  if ($(".moreIndicator").hasClass("rot90")){
+    $(".moreIndicator").removeClass('rot90').addClass("rot270")
+  } else{
+    $(".moreIndicator").removeClass("rot270").addClass("rot90")
+  }
+
+  $('.details').slideToggle();
+
+
+
+
+
+    // Offset #nextPhoto to the right side of #nav div
+    $('#nextPhoto').position({
+      my: 'right',
+      at: 'right',
+      of: '#nav'
+    });
+
+    // Click handler for navigating to the next photo
+    $("#nextPhoto").on("click", function () {
+      $(".thumbnail").next(".thumbnail")
+    });
+
+    $("#prevPhoto").on("click", function () {
+      
+    });
+
+
+
+
+
+
+
+
+  
+});
+
   fetchJSON();
 });
 
@@ -132,14 +172,3 @@ function fetchJSON() {
   mRequest.open("GET", mUrl);
   mRequest.send();
 }
-
-
-$(".moreIndicator").on("click", function () {
-  if ($(".moreIndicator").hasClass("rot90")){
-    $(".moreIndicator").removeClass('rot90').addClass("rot270")
-  } else{
-    $(".moreIndicator").removeClass("rot270").addClass("rot90")
-  }
-
-  $('.details').slideToggle();
-});
