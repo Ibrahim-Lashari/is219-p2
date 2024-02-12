@@ -34,7 +34,6 @@ function animate() {
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
 
 function swapPhoto() {
-  mCurrentIndex++;
   if (mCurrentIndex >= mImages.length) {
     mCurrentIndex = 0;
   }
@@ -96,6 +95,38 @@ function makeGalleryImageOnloadCallback(galleryImage) {
 $(document).ready(function () {
   // This initially hides the photos' metadata information
   //$(".details").eq(0).hide();
+  $(".moreIndicator").on("click", function () {
+    if ($(".moreIndicator").hasClass("rot90")){
+      $(".moreIndicator").removeClass('rot90').addClass("rot270")
+    } else{
+      $(".moreIndicator").removeClass("rot270").addClass("rot90")
+    }
+  
+  
+    $('.details').slideToggle();
+   
+  });  
+
+  $('#nextPhoto').position({
+    my: 'right',
+    at: 'right',
+    of: '#nav'
+  });
+
+  $("#nextPhoto").on("click", function () {
+    swapPhoto()
+  });
+  
+  
+  $("#prevPhoto").on("click", function () {
+    mCurrentIndex = mCurrentIndex - 2;
+    swapPhoto()
+  });
+  
+ 
+
+
+
   fetchJSON();
 });
 
@@ -132,14 +163,3 @@ function fetchJSON() {
   mRequest.open("GET", mUrl);
   mRequest.send();
 }
-
-
-$(".moreIndicator").on("click", function () {
-  if ($(".moreIndicator").hasClass("rot90")){
-    $(".moreIndicator").removeClass('rot90').addClass("rot270")
-  } else{
-    $(".moreIndicator").removeClass("rot270").addClass("rot90")
-  }
-
-  $('.details').slideToggle();
-});

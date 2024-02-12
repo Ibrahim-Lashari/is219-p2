@@ -36,6 +36,7 @@ body {
 .thumbnail {
 	position: relative;
 	box-shadow: 1px 3px 20px 0px;
+	width: 100%;
 }
 
 
@@ -77,7 +78,10 @@ Make it animate nicely. You'll need CSS3 for this*/
 
 /*Add CSS styles to rotate the element 180deg
 Make it animate nicely. You'll need CSS3 for this*/
-.rot180 {}
+.rot180 {
+	transition: all 1s ease;
+	transform: rotate(180deg);
+}
 
 /*Add CSS styles to rotate the element 270deg
 Make it animate nicely. You'll need CSS3 for this*/
