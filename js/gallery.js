@@ -34,36 +34,36 @@ function animate() {
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
 
 function swapPhoto() {
-  if (mCurrentIndex >= mImages.length) {
+  if (mCurrentIndex >= mExtra.length) {
     mCurrentIndex = 0;
   }
   if (mCurrentIndex < 0) {
-    mCurrentIndex = mImages.length - 1;
+    mCurrentIndex = mExtra.length - 1;
   }
   //Add code here to access the #slideShow element.
   //Access the img element and replace its source
   //with a new image from your images array which is loaded
   //from the JSON string
   var photoElement = document.getElementById("photo");
-  photoElement.src = mImages[mCurrentIndex].imgPath;
+  photoElement.src = mExtra[mCurrentIndex].imgPath;
   let locationElement = document.getElementsByClassName("location")[0];
   let descriptionElement = document.getElementsByClassName("description")[0];
   let dateElement = document.getElementsByClassName("date")[0];
-  descriptionElement.innerHTML = "Description: " + mImages[mCurrentIndex].description;
-  locationElement.innerHTML = "Location: " + mImages[mCurrentIndex].location;
-  dateElement.innerHTML = "Date: " + mImages[mCurrentIndex].date;
+  descriptionElement.innerHTML = "Description: " + mExtra[mCurrentIndex].description;
+  locationElement.innerHTML = "Location: " + mExtra[mCurrentIndex].location;
+  dateElement.innerHTML = "Date: " + mExtra[mCurrentIndex].date;
   let mLastFrameTime = 0;
   mCurrentIndex += 1;
   console.log("swap photo");
 }
 
 function iterateJSON(mJson) {
-  for (var i = 0; i < mJson.images.length; i++) {
-    mImages[i] = new GalleryImage();
-    mImages[i].imgPath = mJson.images[i].imgPath;
-    mImages[i].location = mJson.images[i].imgLocation;
-    mImages[i].description = mJson.images[i].description;
-    mImages[i].date = mJson.images[i].date;
+  for (var i = 0; i < mJson.extra.length; i++) {
+    mExtra[i] = new GalleryImage();
+    mExtra[i].imgPath = mJson.extra[i].imgPath;
+    mExtra[i].location = mJson.extra[i].imgLocation;
+    mExtra[i].description = mJson.extra[i].description;
+    mExtra[i].date = mJson.extra[i].date;
   }
 }
 
@@ -74,21 +74,21 @@ var mCurrentIndex = 0;
 var mRequest = new XMLHttpRequest();
 
 // Array holding GalleryImage objects (see below).
-var mImages = [];
+var mExtra = [];
 
 // Holds the retrived JSON information
 var mJson;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = "images.json";
+var mUrl = "extra.json";
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
 function makeGalleryImageOnloadCallback(galleryImage) {
   return function (e) {
     galleryImage.img = e.target;
-    mImages.push(galleryImage);
+    mExtra.push(galleryImage);
   };
 }
 
