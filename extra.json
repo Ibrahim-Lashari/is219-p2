@@ -3,31 +3,31 @@
         {
             "imgPath": "https://c.files.bbci.co.uk/14268/production/_128463528_bbcmp_taiwan.jpg",
             "imgLocation": "Taiwan",
-            "description": "Welcome to Taiwan",
+            "description": "The Republic of China (Taiwan) is situated in the West Pacific between Japan and the Philippines. Its jurisdiction extends to the archipelagoes of Penghu, Kinmen and Matsu, as well as numerous other islets. The total area of Taiwan proper and its outlying islands is around 36,197 square kilometers.",
             "date": "02/12/2024"
         },
         {
-            "imgPath": "https://as2.ftcdn.net/v2/jpg/01/61/07/19/1000_F_161071903_SJC4hVYp9RppAAxm1zlAT3zrMcCsmRm4.jpg",
+            "imgPath": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9nomgZR2gJvdomcYpwgZNgHBb0ga3nK90wA&usqp=CAU",
             "imgLocation": "Tokyo",
-            "description": "Welcome to Tokyo",
+            "description": "Tokyo is the administrative, cultural, financial, commercial, and educational centre of Japan and the focus of an extensive urban complex that includes Kawasaki and Yokohama. Attractions include the Imperial Palace, encircled by stone-walled moats and broad gardens, and numerous temples and shrines.",
             "date": "02/13/2024"
         },
         {
             "imgPath": "https://www.nippon.com/en/ncommon/contents/guide-to-japan/2351116/2351116.png",
             "imgLocation": "Saitama",
-            "description": "Welcome to Saitama",
+            "description": "Saitama, capital of Saitama ken (prefecture), east-central Honshu, Japan. Situated in the southeastern part of the prefecture, the city was created in 2001 through the merger of the former cities of Urawa, Yono, and Ōmiya",
             "date": "02/14/2024"
         },
         {
             "imgPath": "https://c.files.bbci.co.uk/EE56/production/_129041016_bbcm_north-korea_country_profile_200323.png",
             "imgLocation": "North Korea",
-            "description": "Welcome to North Korea",
+            "description": "North Korea is composed of mountains and uplands, separated by deep and narrow valleys. The government system is a communist state one-man dictatorship; the chief of state is the president, and the head of state is the State Affairs Commission Chairman.",
             "date": "02/15/2024"
         },
         {
             "imgPath": "https://static.vecteezy.com/system/resources/previews/002/323/413/non_2x/south-korea-detailed-map-with-regions-free-vector.jpg",
             "imgLocation": "South Korea",
-            "description": "Welcome to South Korea",
+            "description": "South Korea is a country in Eastern Asia occupying the southern half of the Korean Peninsula. It borders the Sea of Japan, the Yellow Sea, and North Korea. South Korea's terrain is mostly mountainous.",
             "date": "02/16/2024"
         }
   ]

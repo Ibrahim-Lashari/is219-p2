@@ -10,7 +10,7 @@ body {
 	width: 650px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: white;
+	background-color: red;
 	border-radius: 2px;
 }	
 
@@ -44,6 +44,7 @@ body {
 .banner {
 	text-align: center;
 	font-size: 1.25em;
+	color: white;
 }
 
 #nav {
@@ -71,6 +72,7 @@ body {
 
 .details p {
 	margin-top: 20px;
+	color: white;
 }
 .details {
 	border: 1px #000 dashed;
