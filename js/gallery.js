@@ -33,6 +33,7 @@ function animate() {
 
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
 
+// Every few seconds, the photo with the class of .thumbnail will switch to the next photo in its array
 function swapPhoto() {
   if (mCurrentIndex >= mExtra.length) {
     mCurrentIndex = 0;
@@ -56,6 +57,7 @@ function swapPhoto() {
   mCurrentIndex += 1;
   console.log("swap photo");
 }
+
 
 function iterateJSON(mJson) {
   for (var i = 0; i < mJson.extra.length; i++) {
@@ -107,17 +109,19 @@ $(document).ready(function () {
    
   });  
 
+  // This is what moves the next arrow to the right side of the screen
   $('#nextPhoto').position({
     my: 'right',
     at: 'right',
     of: '#nav'
   });
 
+  // When you press the next arrow, it will go to the next image
   $("#nextPhoto").on("click", function () {
     swapPhoto()
   });
   
-  
+  // When you press the previous arrow, it will go to the previous image
   $("#prevPhoto").on("click", function () {
     mCurrentIndex = mCurrentIndex - 2;
     swapPhoto()
@@ -150,6 +154,7 @@ function GalleryImage() {
   var img;
 }
 
+// After the basic html and css of the page loads, the javascript functions will be called and loaded
 function fetchJSON() {
   mRequest.onreadystatechange = () => {
     if (mRequest.readyState == 4 && mRequest.status == 200) {
